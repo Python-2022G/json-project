@@ -57,13 +57,11 @@ def get_all_users_fullname(data: str) -> list:
     for user in data['users']:
         full_name = user['first_name'] + ' ' + user['last_name']
         full_names.append(full_name)
-        
+
     return full_names
 
-print(get_all_users_fullname(data_dict))
 
-
-def get_user_by_id(id: int) -> dict:
+def get_user_by_id(data: dict, id: int) -> dict:
     '''get user by id
     
     Args:
@@ -72,8 +70,11 @@ def get_user_by_id(id: int) -> dict:
     Returns:
         dict: user data
     '''
-    return
-
+    for user in data['users']:
+        if user['id'] == str(id):
+            return user
+ 
+print(get_user_by_id(data_dict, 9))
 
 def get_user_by_firstname(first_name: str) -> dict:
     '''get user by first name
