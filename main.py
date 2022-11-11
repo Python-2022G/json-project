@@ -65,6 +65,7 @@ def get_user_by_id(data: dict, id: int) -> dict:
     '''get user by id
     
     Args:
+        data (dict): users data
         id (int): user id.
         
     Returns:
@@ -76,10 +77,11 @@ def get_user_by_id(data: dict, id: int) -> dict:
  
 print(get_user_by_id(data_dict, 9))
 
-def get_user_by_firstname(first_name: str) -> dict:
+def get_user_by_firstname(data: dict, first_name: str) -> dict:
     '''get user by first name
     
     Args:
+        data (dict): users data
         first_name (str): user's first name.
         
     Returns:
@@ -88,10 +90,11 @@ def get_user_by_firstname(first_name: str) -> dict:
     return
 
 
-def get_user_by_lastname(last_name: str) -> dict:
+def get_user_by_lastname(data: dict, flast_name: str) -> dict:
     '''get user by last name
     
     Args:
+        data (dict): users data
         first_name (str): user's last name.
         
     Returns:
@@ -100,10 +103,11 @@ def get_user_by_lastname(last_name: str) -> dict:
     return
 
 
-def get_user_by_country(country: str) -> dict:
+def get_user_by_country(data: dict, fcountry: str) -> dict:
     '''get user by country
     
     Args:
+        data (dict): users data
         country (str): name of user's country.
         
     Returns:
