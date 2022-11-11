@@ -1,12 +1,6 @@
 {
     "users": [
         {
-            "id": "id",
-            "first_name": "first_name",
-            "last_name": "last_name",
-            "country": "country"
-        },
-        {
             "id": "1",
             "first_name": "Cherise",
             "last_name": "Gowthorpe",
