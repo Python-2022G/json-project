@@ -1,3 +1,5 @@
+import json
+
 def json_file_to_dict(file_path: str) -> dict:
     '''convert json to dict
     
@@ -7,7 +9,12 @@ def json_file_to_dict(file_path: str) -> dict:
     Returns:
         dict: dict data
     '''
-    return
+    data = open(file_path).read()
+    data_json = json.loads(data)
+
+    return data_json
+
+print(type(json_file_to_dict('data.json')))
 
 
 def get_number_of_users(data: dict) -> int:
