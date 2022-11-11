@@ -10,11 +10,9 @@ def json_file_to_dict(file_path: str) -> dict:
         dict: dict data
     '''
     data = open(file_path).read()
-    data_json = json.loads(data)
+    data_dict = json.loads(data)
 
-    return data_json
-
-print(type(json_file_to_dict('data.json')))
+    return data_dict
 
 
 def get_number_of_users(data: dict) -> int:
@@ -26,7 +24,18 @@ def get_number_of_users(data: dict) -> int:
     Returns:
         int: number of all users.
     '''
-    return
+    return len(data['users'])
+
+
+data_dict = json_file_to_dict('data.json')
+
+count = get_number_of_users(data_dict)
+print(count)
+
+
+
+
+
 
 
 def get_all_countries(data: str) -> list:
