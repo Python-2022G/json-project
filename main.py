@@ -43,7 +43,6 @@ def get_all_countries(data: dict) -> list:
         countries.append(user['country'])
     return countries
 
-print(get_all_countries(data_dict))
 
 def get_all_users_fullname(data: str) -> list:
     '''all users' full name.
@@ -54,7 +53,14 @@ def get_all_users_fullname(data: str) -> list:
     Returns:
         list: list of all users' full name
     '''
-    return
+    full_names = []
+    for user in data['users']:
+        full_name = user['first_name'] + ' ' + user['last_name']
+        full_names.append(full_name)
+        
+    return full_names
+
+print(get_all_users_fullname(data_dict))
 
 
 def get_user_by_id(id: int) -> dict:
