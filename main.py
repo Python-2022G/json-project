@@ -92,7 +92,7 @@ def get_user_by_firstname(data: dict, first_name: str) -> dict:
             return user
     return "does not exist"
 
-print(get_user_by_firstname(data_dict, 'Edwindasdasd'))
+
 
 def get_user_by_lastname(data: dict, flast_name: str) -> dict:
     '''get user by last name
@@ -104,7 +104,12 @@ def get_user_by_lastname(data: dict, flast_name: str) -> dict:
     Returns:
         dict: user data
     '''
-    return
+    for user in data['users']:
+        if user['last_name'] == flast_name:
+            return user
+    return "no"
+
+print(get_user_by_lastname(data_dict, 'Widger'))
 
 
 def get_user_by_country(data: dict, fcountry: str) -> dict:
