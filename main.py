@@ -75,7 +75,7 @@ def get_user_by_id(data: dict, id: int) -> dict:
         if user['id'] == str(id):
             return user
  
-print(get_user_by_id(data_dict, 9))
+
 
 def get_user_by_firstname(data: dict, first_name: str) -> dict:
     '''get user by first name
@@ -87,8 +87,12 @@ def get_user_by_firstname(data: dict, first_name: str) -> dict:
     Returns:
         dict: user data
     '''
-    return
+    for user in data['users']:
+        if user['first_name'] == first_name:
+            return user
+    return "does not exist"
 
+print(get_user_by_firstname(data_dict, 'Edwindasdasd'))
 
 def get_user_by_lastname(data: dict, flast_name: str) -> dict:
     '''get user by last name
