@@ -109,7 +109,6 @@ def get_user_by_lastname(data: dict, flast_name: str) -> dict:
             return user
     return "no"
 
-print(get_user_by_lastname(data_dict, 'Widger'))
 
 
 def get_user_by_country(data: dict, fcountry: str) -> dict:
@@ -122,5 +121,10 @@ def get_user_by_country(data: dict, fcountry: str) -> dict:
     Returns:
         dict: user data
     '''
-    return
+    for user in data['users']:
+        if user['country'] == fcountry:
+            return user
+    return "no"
+
+print(get_user_by_country(data_dict, 'China'))
 
